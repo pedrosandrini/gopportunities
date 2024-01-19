@@ -1,47 +1,26 @@
 package router
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"github.com/pedrosandrini/gopportunities/handler"
 )
 
 func initializeRoutes(router *gin.Engine) {
 	v1 := router.Group("/api/v1")
 	{
 		// Show opening job
-		v1.GET("/opening", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK, gin.H{
-				"message": "GET opening job",
-			})
-		})
+		v1.GET("/opening", handler.ShowOpeningHandler)
 
 		// Create
-		v1.POST("/opening", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK, gin.H{
-				"message": "CREATE opening job",
-			})
-		})
+		v1.POST("/opening", handler.CreateOpeningHandler)
 
 		// Delete
-		v1.DELETE("/opening", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK, gin.H{
-				"message": "DELETE opening job",
-			})
-		})
+		v1.DELETE("/opening", handler.DeleteOpeningHandler)
 
 		// Update
-		v1.PUT("/opening", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK, gin.H{
-				"message": "UPDATE opening job",
-			})
-		})
+		v1.PUT("/opening", handler.UpdateOpeningHandler)
 
 		// Get all opening jobs
-		v1.GET("/openings", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK, gin.H{
-				"message": "GET all opening jobs",
-			})
-		})
+		v1.GET("/openings", handler.ListOpeningsHandler)
 	}
 }

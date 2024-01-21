@@ -21,6 +21,12 @@ func initializeRoutes(router *gin.Engine) {
 		// Show opening job
 		v1.GET("/opening", handler.ShowOpeningHandler)
 
+		// Get all opening jobs
+		v1.GET("/openings", handler.ListOpeningsHandler)
+
+		// Get all deleted opening jobs
+		v1.GET("/openings/deleted", handler.ListDeletedOpeningsHandler)
+
 		// Create
 		v1.POST("/opening", handler.CreateOpeningHandler)
 
@@ -30,8 +36,6 @@ func initializeRoutes(router *gin.Engine) {
 		// Update
 		v1.PUT("/opening", handler.UpdateOpeningHandler)
 
-		// Get all opening jobs
-		v1.GET("/openings", handler.ListOpeningsHandler)
 	}
 
 	// initialize swagger

@@ -44,5 +44,16 @@ func CreateOpeningHandler(ctx *gin.Context) {
 		return
 	}
 
-	sendSuccess(ctx, "create-opening", opening)
+	openingCreateDTOResponse := schemas.OpeningCreateDTOResponse{
+		ID:        opening.ID,
+		CreatedAt: opening.CreatedAt,
+		Role:      opening.Role,
+		Company:   opening.Company,
+		Location:  opening.Location,
+		Remote:    opening.Remote,
+		Link:      opening.Link,
+		Salary:    opening.Salary,
+	}
+
+	sendSuccess(ctx, "create-opening", openingCreateDTOResponse)
 }

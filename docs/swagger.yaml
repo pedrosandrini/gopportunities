@@ -17,14 +17,14 @@ definitions:
   handler.CreateOpeningResponse:
     properties:
       data:
-        $ref: '#/definitions/schemas.OpeningResponse'
+        $ref: '#/definitions/schemas.OpeningCreateDTOResponse'
       message:
         type: string
     type: object
   handler.DeleteOpeningResponse:
     properties:
       data:
-        $ref: '#/definitions/schemas.OpeningResponse'
+        $ref: '#/definitions/schemas.OpeningCreateDTOResponse'
       message:
         type: string
     type: object
@@ -39,7 +39,7 @@ definitions:
     properties:
       data:
         items:
-          $ref: '#/definitions/schemas.OpeningResponse'
+          $ref: '#/definitions/schemas.OpeningCreateDTOResponse'
         type: array
       message:
         type: string
@@ -47,7 +47,7 @@ definitions:
   handler.ShowOpeningResponse:
     properties:
       data:
-        $ref: '#/definitions/schemas.OpeningResponse'
+        $ref: '#/definitions/schemas.OpeningCreateDTOResponse'
       message:
         type: string
     type: object
@@ -69,17 +69,15 @@ definitions:
   handler.UpdateOpeningResponse:
     properties:
       data:
-        $ref: '#/definitions/schemas.OpeningResponse'
+        $ref: '#/definitions/schemas.OpeningCreateDTOResponse'
       message:
         type: string
     type: object
-  schemas.OpeningResponse:
+  schemas.OpeningCreateDTOResponse:
     properties:
       company:
         type: string
       createdAt:
-        type: string
-      deletedAt:
         type: string
       id:
         type: integer
@@ -93,8 +91,6 @@ definitions:
         type: string
       salary:
         type: integer
-      updatedAt:
-        type: string
     type: object
 info:
   contact: {}

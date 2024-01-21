@@ -30,23 +30,23 @@ type ErrorResponse struct {
 }
 
 type CreateOpeningResponse struct {
-	Message string                  `json:"message"`
-	Data    schemas.OpeningResponse `json:"data"`
+	Message string                           `json:"message"`
+	Data    schemas.OpeningCreateDTOResponse `json:"data"`
 }
 
 type DeleteOpeningResponse struct {
-	Message string                  `json:"message"`
-	Data    schemas.OpeningResponse `json:"data"`
+	Message string                           `json:"message"`
+	Data    schemas.OpeningCreateDTOResponse `json:"data"`
 }
 type ShowOpeningResponse struct {
-	Message string                  `json:"message"`
-	Data    schemas.OpeningResponse `json:"data"`
+	Message string                           `json:"message"`
+	Data    schemas.OpeningCreateDTOResponse `json:"data"`
 }
 type ListOpeningsResponse struct {
-	Message string                    `json:"message"`
-	Data    []schemas.OpeningResponse `json:"data"`
+	Message string                             `json:"message"`
+	Data    []schemas.OpeningCreateDTOResponse `json:"data"`
 }
 type UpdateOpeningResponse struct {
-	Message string                  `json:"message"`
-	Data    schemas.OpeningResponse `json:"data"`
+	Message string                           `json:"message"`
+	Data    schemas.OpeningCreateDTOResponse `json:"data"`
 }

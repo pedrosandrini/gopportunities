@@ -16,11 +16,9 @@ type Opening struct {
 	Salary   int64
 }
 
-type OpeningResponse struct {
+type OpeningCreateDTOResponse struct {
 	ID        uint      `json:"id"`
 	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	DeletedAt time.Time `json:"deletedAt,omitempty"`
 	Role      string    `json:"role"`
 	Company   string    `json:"company"`
 	Location  string    `json:"location"`

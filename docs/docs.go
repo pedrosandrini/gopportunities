@@ -289,7 +289,7 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -300,7 +300,7 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -324,7 +324,7 @@ const docTemplate = `{
                 "data": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/schemas.OpeningResponse"
+                        "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                     }
                 },
                 "message": {
@@ -336,7 +336,7 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -370,23 +370,20 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
                 }
             }
         },
-        "schemas.OpeningResponse": {
+        "schemas.OpeningCreateDTOResponse": {
             "type": "object",
             "properties": {
                 "company": {
                     "type": "string"
                 },
                 "createdAt": {
-                    "type": "string"
-                },
-                "deletedAt": {
                     "type": "string"
                 },
                 "id": {
@@ -406,9 +403,6 @@ const docTemplate = `{
                 },
                 "salary": {
                     "type": "integer"
-                },
-                "updatedAt": {
-                    "type": "string"
                 }
             }
         }

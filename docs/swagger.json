@@ -278,7 +278,7 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -289,7 +289,7 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -313,7 +313,7 @@
                 "data": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/schemas.OpeningResponse"
+                        "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                     }
                 },
                 "message": {
@@ -325,7 +325,7 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
@@ -359,23 +359,20 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/schemas.OpeningResponse"
+                    "$ref": "#/definitions/schemas.OpeningCreateDTOResponse"
                 },
                 "message": {
                     "type": "string"
                 }
             }
         },
-        "schemas.OpeningResponse": {
+        "schemas.OpeningCreateDTOResponse": {
             "type": "object",
             "properties": {
                 "company": {
                     "type": "string"
                 },
                 "createdAt": {
-                    "type": "string"
-                },
-                "deletedAt": {
                     "type": "string"
                 },
                 "id": {
@@ -395,9 +392,6 @@
                 },
                 "salary": {
                     "type": "integer"
-                },
-                "updatedAt": {
-                    "type": "string"
                 }
             }
         }
